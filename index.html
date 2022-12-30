@@ -32,7 +32,7 @@
 
                 @media screen and (min-width: 750px) {
                         .list {
-                                width: 300px;
+                                width: 100vw;;
                         }
                 }
 
@@ -80,6 +80,7 @@
                 function display(link) {
 
                         if (!displayed) {
+                                list.style.width="300px"
                                 iframe.style.width = "calc(100vw - 300px)";
                                 iframe.src = link;
                                 iframe.contentWindow.location.reload
