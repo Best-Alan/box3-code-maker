@@ -34,11 +34,13 @@
                                 width: 300px;
                         }
                 }
+
                 @media screen and (max-width: 750px) {
                         .list {
                                 width: 100%;
                         }
                 }
+
                 .iframe {
                         width: 0;
                         transition: 0.3s;
@@ -47,32 +49,33 @@
                         height: 0;
                 }
         </style>
-        <div class="list">
-                SQL相关内容：
-                <center><button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple"
-                                style="width: 100%; height: 50px; margin-top: 15px; margin-bottom: 15px;"
-                                onclick="display('./create.html')">SQL-创建表格</button></center>
-                <center><button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple"
-                                style="width: 100%; height: 50px; margin-bottom: 15px;"
-                                onclick="display('./save.html')">SQL-保存数据</button></center>
-                <center><button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple"
-                                style="width: 100%; height: 50px; margin-bottom: 15px;"
-                                onclick="display('./load.html')">SQL-加载数据</button></center>
-        </div>
-        <div>
-                <iframe class="iframe"></iframe>
+        <div style="white-space: nowrap;">
+                <div class="list">
+                        SQL相关内容：
+                        <center><button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple"
+                                        style="width: 100%; height: 50px; margin-top: 15px; margin-bottom: 15px;"
+                                        onclick="display('./create.html')">SQL-创建表格</button></center>
+                        <center><button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple"
+                                        style="width: 100%; height: 50px; margin-bottom: 15px;"
+                                        onclick="display('./save.html')">SQL-保存数据</button></center>
+                        <center><button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple"
+                                        style="width: 100%; height: 50px; margin-bottom: 15px;"
+                                        onclick="display('./load.html')">SQL-加载数据</button></center>
+                </div><div>
+                        <iframe class="iframe"></iframe>
+                </div>
         </div>
         <script>
                 //window.location.reload
                 var iframe = document.getElementsByClassName("iframe")[0]
                 var displayed;
                 function display(link) {
-                        
+
                         if (!displayed) {
-                                iframe.style.width="100%";
-                                iframe.src=link;
+                                iframe.style.width = "100%";
+                                iframe.src = link;
                                 iframe.contentWindow.location.reload
-                                event.target.style.borderLeft="10px solid #55aaff";
+                                event.target.style.borderLeft = "10px solid #55aaff";
                                 console.log(event.target)
                         }
                 }
