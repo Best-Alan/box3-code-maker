@@ -46,7 +46,7 @@
                         width: 0;
                         transition: 0.3s;
                         border: none;
-                        height: 0;
+                        height: 100%;
                 }
         </style>
         <div style="white-space: nowrap;">
@@ -67,6 +67,7 @@
         </div>
         <script>
                 //window.location.reload
+                var list = document.getElementsByClassName("list")[0]
                 var iframe = document.getElementsByClassName("iframe")[0]
                 var displayed;
                 function display(link) {
@@ -79,9 +80,16 @@
                                 console.log(event.target)
                         }
                 }
+                setInterval(function(){
                 if (document.documentElement.clientWidth >= 750) {
-
+                        list.style.width="300px"
                 }
+                else{
+                        list.style.width=document.documentElement.clientWidth
+                }
+        
+                },1000)
+
         </script>
 </body>
 
