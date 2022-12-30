@@ -70,7 +70,8 @@
                         if (!displayed) {
                                 iframe.style.width="100%";
                                 iframe.src=link;
-                                event.target.style.borderLeft="3px solid #55aaff";
+                                iframe.window.location.reload
+                                event.target.style.borderLeft="10px solid #55aaff";
                                 console.log(event.target)
                         }
                 }
