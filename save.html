@@ -85,15 +85,7 @@
                 }
             };
         }
-        function get(keyword) {
-			var reg = new RegExp("(^|&)" + keyword + "=([^&]*)(&|$)", "i");
-			var r = window.location.search.substr(1).match(reg);
-			if (r != null) return unescape(r[2]);
-			return null;
-		}
-		if(get("no_header")=="1"){
-			document.getElementsByClassName("mdui-toolbar")[0].remove()
-		}
+        
     </script>
     <div class="mdui-toolbar mdui-color-theme">
         <a href="./index.html" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">arrow_back</i></a>
@@ -146,6 +138,15 @@
                 t.value = l[i];
             }
         }
+        function get(keyword) {
+			var reg = new RegExp("(^|&)" + keyword + "=([^&]*)(&|$)", "i");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]);
+			return null;
+		}
+		if(get("no_header")=="1"){
+			document.getElementsByClassName("mdui-toolbar")[0].remove()
+		}
     </script>
 
     <textarea id="save_input">这是复制的幕后黑手（（（</textarea>
