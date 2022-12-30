@@ -32,7 +32,8 @@
 
                 @media screen and (min-width: 750px) {
                         .list {
-                                width: 100vw;;
+                                width: 100vw;
+                                ;
                         }
                 }
 
@@ -73,6 +74,10 @@
                 </div>
         </div>
         <script>
+                var list_elements = document.getElementsByClassName("mdui-btn-raised")
+
+
+
                 //window.location.reload
                 var list = document.getElementsByClassName("list")[0]
                 var iframe = document.getElementsByClassName("iframe")[0]
@@ -80,18 +85,20 @@
                 function display(link) {
                         if (!displayed) {
                                 if (document.documentElement.clientWidth < 750) {
-                                        list.style.width="0"
-                                        window.location=link
+                                        list.style.width = "0"
+                                        window.location = link
                                         return;
+                                } 
+                                for (let i = 0; i < 3; i++) {
+                                        let e = eval(`list_elements[${i}]`)
+                                        e.style.borderLeft = "none"
                                 }
-                                list.style.width="300px"
+                                list.style.width = "300px"
                                 iframe.style.width = "calc(100vw - 300px)";
                                 iframe.src = link;
                                 //iframe.contentWindow.location.reload()
                                 event.target.style.borderLeft = "10px solid #55aaff";
                                 console.log(event.target)
-                                
-
                         }
                 }
                 /*
