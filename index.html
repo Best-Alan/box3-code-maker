@@ -63,10 +63,14 @@
                 <iframe class="iframe"></iframe>
         </div>
         <script>
+                var iframe = document.getElementsByClassName("iframe")[0]
+                var displayed;
                 function display(link) {
                         console.log(event.target)
-                        if (document.documentElement.clientWidth >= 750) {
-
+                        if (!displayed) {
+                                iframe.style.width="100%";
+                                iframe.target.src=link
+                                event.target.style.paddingLeft="3px solid #55aaff"
                         }
                 }
                 if (document.documentElement.clientWidth >= 750) {
