@@ -12,7 +12,7 @@
         <title>Box3-CodeMaker</title>
 </head>
 
-<body class="mdui-theme-primary-blue mdui-theme-layout-dark mdui-theme-accent-blue" leftmargin=0 topmargin=0
+<body style="height: 100vh;" class="mdui-theme-primary-blue mdui-theme-layout-dark mdui-theme-accent-blue" leftmargin=0 topmargin=0
         oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
         <div class="mdui-toolbar mdui-color-theme">
                 <span class="mdui-typo-title">Box3-CodeMaker</span>
@@ -95,7 +95,7 @@
                                 }
                                 list.style.width = "300px"
                                 iframe.style.width = "calc(100vw - 300px)";
-                                iframe.src = link;
+                                iframe.src = link+"?no_header=1";
                                 //iframe.contentWindow.location.reload()
                                 event.target.style.borderLeft = "10px solid #55aaff";
                                 //console.log(event.target)
