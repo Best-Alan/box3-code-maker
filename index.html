@@ -61,9 +61,9 @@
                         <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple"
                                         style="width: 100%; height: 50px; margin-bottom: 15px;"
                                         onclick="display('./load.html')">SQL-加载数据</button>
-                </div><!--div class="iframe"-->
+                </div><div>
                         <iframe class="iframe"></iframe>
-                <!--/div-->
+                </div>
         </div>
         <script>
                 //window.location.reload
@@ -73,13 +73,14 @@
                 function display(link) {
 
                         if (!displayed) {
-                                iframe.style.width = "100%";
+                                iframe.style.width = "calc(100vw - 300)";
                                 iframe.src = link;
                                 iframe.contentWindow.location.reload
                                 event.target.style.borderLeft = "10px solid #55aaff";
                                 console.log(event.target)
                         }
-                }/*
+                }
+                /*
                 setInterval(function(){
                 if (document.documentElement.clientWidth >= 750) {
                         list.style.width="300px"
