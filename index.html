@@ -63,6 +63,7 @@
                 <iframe class="iframe"></iframe>
         </div>
         <script>
+                //window.location.reload
                 var iframe = document.getElementsByClassName("iframe")[0]
                 var displayed;
                 function display(link) {
@@ -70,7 +71,7 @@
                         if (!displayed) {
                                 iframe.style.width="100%";
                                 iframe.src=link;
-                                iframe.window.location.reload
+                                iframe.contentWindow.location.reload
                                 event.target.style.borderLeft="10px solid #55aaff";
                                 console.log(event.target)
                         }
